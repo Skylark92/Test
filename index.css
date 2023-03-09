@@ -1,14 +1,18 @@
-body, :root, #app, .content-wrapper, .slide-wrapper {
+body, :root, #app, .slide-wrapper {
   width: 100%;
   height: 100%;
+
+  margin: 0;
+  padding: 0;
 }
 
 #app {
   background: antiquewhite;
 }
 
-.content-wrapper, #app, body {
-  overflow: hidden;
+.content-wrapper {
+  width: 100vw;
+  height: 100vh;
 }
 
 .slide-wrapper::-webkit-scrollbar {
@@ -25,15 +29,14 @@ body, :root, #app, .content-wrapper, .slide-wrapper {
 }
 
 .slide {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   scroll-snap-align: center;
-
-  margin: 3rem auto;
+  scroll-snap-stop: always;
   border-radius: 1rem;
 
   font-size: 40px;
   font-weight: bold;
   text-align: center;
-  line-height: 80vh;
+  line-height: 100vh;
 }
